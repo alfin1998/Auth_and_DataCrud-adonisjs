@@ -4,6 +4,9 @@ class LoginController {
 
     index({ view }) {
       return view.render('auth.login')
+      
+
+
     }
   
     async check({ request, auth, session, response }) {
@@ -11,6 +14,19 @@ class LoginController {
       /**
        * get data from form
        */
+
+      const Admin = use('App/Models/Admin')
+      if (auth.user instanceof Admin) {
+        const { email, password } = request.all()
+  
+    
+        await auth.attempt(email, password)
+  
+        return response.route('dashboard')
+        
+        
+      }
+
       const { email, password } = request.all()
   
       /**
@@ -24,7 +40,7 @@ class LoginController {
   
     async logout({ auth, response }) {
       await auth.logout()
-      return response.route('login.index')
+      return response.route('/')
     }
   
   }
