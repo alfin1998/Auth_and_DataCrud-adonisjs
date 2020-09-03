@@ -42,3 +42,7 @@ Route.get('/edit/:id', 'TodoController.edit').as('Todo.edit')
 Route.get('/delete/:id', 'TodoController.delete').as('Todo.delete')
 Route.post('/store', 'TodoController.store').as('Todo.store')
 Route.post('/update/:id', 'TodoController.update').as('Todo.update')
+
+Route.get('dashboard', ({ session }) => {
+    return session.get('username') 
+  })
