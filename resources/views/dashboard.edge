@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+      <!-- Main Styles CSS -->
+  <link href="{{ assetsUrl('assets/css/main.css') }}" rel="stylesheet">
+  <title>Dashboard</title>
+</head>
+<body >
+
+  
+<div class="navbar navbar-inverse" role="navigation">
+    <a class="navbar-brand">Menu</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="{{ route('dashboard') }}">Dashboard</a>
+      </li>
+      <li>
+        <a href="{{ route('Todo.index') }}">Data</a>
+      </li>
+      <li>
+        <a href="{{ route('logout') }}" >Logout</a>
+      </li>
+    </ul>
+</div>
+  
+
+
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-body">
+          <label>DASHBOARD</label>
+          <hr>
+          Selamat Datang <strong>{{ user.name }}</strong>
+        </div>
+      </div>
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="{{ assetsUrl('assets/js/custom.js') }}"></script>
+</body>
+</html>

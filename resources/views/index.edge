@@ -1,0 +1,46 @@
+@layout('base')
+@yield('content')
+<!-- @yield($slot.content) -->
+<!-- Main Section -->
+<section class="main-section">
+    <!-- Add Your Content Inside -->
+    <div class="container">
+        <!-- Remove This Before You Start -->
+        <div class="row">
+            <div class="col-md-12"  style="margin-top:30px;">
+                <a href="{{ route('Todo.create') }}" class="btn btn-md btn-success">Create Data</a>
+                @if(flashMessage('notification'))
+                    <div class="alert alert-success">{{ flashMessage('notification') }}</div>
+                @endif
+            </div>
+            <div class="col-md-12"  style="margin-top:20px;">
+                <table class="table table-hovered">
+                    <thead>
+                        <tr>
+                            <td>No</td>
+                            <td>Title</td>
+                            <td>Description</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @each(todo in todos)
+                        <tr>
+                            <td> {{ todo.id }} </td>
+                            <td> {{ todo.title }} </td>
+                            <td> {{ todo.description }} </td>
+                            <td> 
+                                <a href="{{ route('Todo.edit', { id : todo.id }) }}" class="btn btn-sm btn-primary">Edit</a> 
+                                <a href="{{ route('Todo.delete', { id : todo.id }) }}" class="btn btn-sm btn-danger">Delete</a> 
+                            </td>
+                        </tr>
+                        @endeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /.content -->
+</section>
+<!-- /.main-section -->
+@endyield
