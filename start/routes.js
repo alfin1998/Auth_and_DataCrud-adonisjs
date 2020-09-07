@@ -26,6 +26,7 @@ Route.post('register', 'Auth/RegisterController.store').as('register.store').mid
 /**
 * login
 */
+// Route.get('login', 'Auth/LoginController.index').as('login.index').middleware(['RedirectIfAuthenticated', 'auth:admin'])
 Route.get('login', 'Auth/LoginController.index').as('login.index').middleware(['RedirectIfAuthenticated'])
 Route.post('login', 'Auth/LoginController.check').as('login.check').middleware(['RedirectIfAuthenticated'])
 Route.get('logout', 'Auth/LoginController.logout').as('logout').middleware(['Authenticate'])
@@ -43,6 +44,28 @@ Route.get('/delete/:id', 'TodoController.delete').as('Todo.delete')
 Route.post('/store', 'TodoController.store').as('Todo.store')
 Route.post('/update/:id', 'TodoController.update').as('Todo.update')
 
-Route.get('dashboard', ({ session }) => {
-    return session.get('username') 
-  })
+// Route.get('dashboard', ({ session }) => {
+//     return session.get('username') 
+//   })
+
+//Admin
+Route.get('loginadmin', 'Admin/LoginadminController.index').as('loginadmin.index').middleware(['RedirectifAuthenticatedAdmin'])
+Route.post('loginadmin', 'Admin/LoginadminController.check').as('loginadmin.check').middleware(['RedirectifAuthenticatedAdmin'])
+Route.get('dashboardAdmin', 'Admin/DashboardAdminController.index').as('dashboardAdmin').middleware(['Authenticate'])
+
+
+
+// start | Routes.js
+// Route.group(() => {
+//     Route.post("/user-register", "UserController.register");
+//     Route.post("/user-login", "UserController.login");
+//   });
+  
+//   Route.group(() => {
+//     Route.get("/admin/login", "TodoController.index");
+//     // Route.post("login", "TodoController.create");
+//   }).middleware("auth");
+  
+//   Route.group(() => {
+//     Route.delete("/todo", "TodoController.delete");
+//   }).middleware(["auth", "admin"]);

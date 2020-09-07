@@ -21,10 +21,10 @@ class RegisterController {
     }
 
     const messages = {
-      'name.required': 'Nama lengkap Tidak Boleh Kosong!',
-      'email.required': 'Alamat Email Tidak Boleh Kosong!',
-      'email.unique': 'Alamat Email Sudah Terdaftar!',
-      'password.required': 'Password Tidak Boleh Kosong!',
+      'name.required': 'Name required',
+      'email.required': 'Email Required',
+      'email.unique': 'Email should unique',
+      'password.required': 'Password dont empty',
     }
 
     const validation = await validate(request.all(), rules, messages)

@@ -11,7 +11,7 @@
   <div class="row justify-content-center">
     <div class="col-md-5">
       <div class="text-center">
-        <h4>WEBSITE LOGIN</h4>
+        <h4>Admin LOGIN</h4>
       </div>
       <div class="card">
         <div class="card-body">
@@ -28,9 +28,9 @@
               {{ elIf('<span class="text-danger">$self</span>', getErrorFor('password'), hasErrorFor('password')) }}
             </div>
             <button class="btn btn-success btn-md btn-block" type="submit">LOGIN</button>
-            <a href="{{ route('register.index') }}" method="GET" class="btn btn-large btn-block btn-success">REGISTER</button>  </a>
+           
           </form>
-          <a href="{{ route('loginadmin.index') }}" method="GET" class="btn btn-large btn-block btn-success">Admin</button>  </a>
+         
         </div>
       </div>
     </div>

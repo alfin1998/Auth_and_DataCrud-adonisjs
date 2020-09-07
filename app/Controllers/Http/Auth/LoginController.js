@@ -15,17 +15,17 @@ class LoginController {
        * get data from form
        */
 
-      const Admin = use('App/Models/Admin')
-      if (auth.user instanceof Admin) {
-        const { email, password } = request.all()
+      // const Admin = use('App/Models/Admin')
+      // if (auth.user instanceof Admin) {
+      //   const { email, password } = request.all()
   
     
-        await auth.attempt(email, password)
+      //   await auth.attempt(email, password)
   
-        return response.route('dashboard')
+      //   return response.route('dashboard')
         
         
-      }
+      // }
 
       const { email, password } = request.all()
   

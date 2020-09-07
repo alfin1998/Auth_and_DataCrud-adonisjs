@@ -1,6 +1,7 @@
 'use strict'
 
 const RedirectIfAuthenticated = require('../app/Middleware/RedirectIfAuthenticated')
+const RedirectIfAuthenticatedAdmin = require('../app/Middleware/RedirectIfAuthenticatedAdmin') 
 
 /** @type {import('@adonisjs/framework/src/Server')} */
 const Server = use('Server')
@@ -44,7 +45,8 @@ const namedMiddleware = {
   auth: 'Adonis/Middleware/Auth',
   guest: 'Adonis/Middleware/AllowGuestOnly',
   Authenticate: 'App/Middleware/Authenticate',
-  RedirectIfAuthenticated: 'App/Middleware/RedirectIfAuthenticated'
+  RedirectIfAuthenticated: 'App/Middleware/RedirectIfAuthenticated',
+  RedirectIfAuthenticatedAdmin: 'App/Middleware/RedirectIfAuthenticatedAdmin'
 }
 
 /*

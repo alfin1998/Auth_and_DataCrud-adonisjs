@@ -91,4 +91,23 @@ module.exports = {
     uid: 'email',
     password: 'password'
   }
+
+
+
+  // user: {
+  //   serializer: 'lucid',
+  //   model: 'App/Models/User',
+  //   scheme: 'session',
+  //   uid: 'email',
+  //   password: 'password'
+  // },
+  // admin: {
+  //   serializer: 'lucid',
+  //   model: 'App/Models/Admin',
+  //   scheme: 'session',
+  //   uid: 'email',
+  //   password: 'password'
+  // }
+
+
 }
