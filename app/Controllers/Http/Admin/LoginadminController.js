@@ -3,8 +3,8 @@
 class LoginadminController {
 
 
-    index({ view }) {
-        return view.render('admin.login')
+    index({ view, response,  request}) {
+        return view.render('admin.loginadmin')
         
       }
     

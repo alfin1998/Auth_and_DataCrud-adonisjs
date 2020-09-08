@@ -49,8 +49,8 @@ Route.post('/update/:id', 'TodoController.update').as('Todo.update')
 //   })
 
 //Admin
-Route.get('loginadmin', 'Admin/LoginadminController.index').as('loginadmin.index').middleware(['RedirectifAuthenticatedAdmin'])
-Route.post('loginadmin', 'Admin/LoginadminController.check').as('loginadmin.check').middleware(['RedirectifAuthenticatedAdmin'])
+Route.get('loginadmin', 'Admin/LoginadminController.index').as('loginadmin.index').middleware(['RedirectIfAuthenticatedAdmin'])
+Route.post('loginadmin', 'Admin/LoginadminController.check').as('loginadmin.check').middleware(['RedirectIfAuthenticatedAdmin'])
 Route.get('dashboardAdmin', 'Admin/DashboardAdminController.index').as('dashboardAdmin').middleware(['Authenticate'])
 
 

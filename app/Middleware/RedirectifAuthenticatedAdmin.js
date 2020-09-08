@@ -9,11 +9,11 @@ class RedirectifAuthenticatedAdmin {
    * @param {Request} ctx.request
    * @param {Function} next
    */
-  async handle ({ request }, next) {
+  async handle ({ request, auth, response }, next) {
     // call next to advance the request
     try{
       await auth.check()
-      return response.route('admin/dashboardAdmin')
+      return response.route('admin.dashboardAdmin')
     }
     catch (error){
       // await auth.check()

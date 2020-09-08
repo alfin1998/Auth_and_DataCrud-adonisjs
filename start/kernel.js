@@ -46,7 +46,7 @@ const namedMiddleware = {
   guest: 'Adonis/Middleware/AllowGuestOnly',
   Authenticate: 'App/Middleware/Authenticate',
   RedirectIfAuthenticated: 'App/Middleware/RedirectIfAuthenticated',
-  RedirectIfAuthenticatedAdmin: 'App/Middleware/RedirectIfAuthenticatedAdmin'
+  RedirectIfAuthenticatedAdmin: 'App/Middleware/RedirectifAuthenticatedAdmin'
 }
 
 /*
