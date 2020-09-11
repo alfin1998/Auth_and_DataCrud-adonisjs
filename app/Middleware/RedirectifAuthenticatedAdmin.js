@@ -13,7 +13,7 @@ class RedirectifAuthenticatedAdmin {
     // call next to advance the request
     try{
       await auth.check()
-      return response.route('admin.dashboardAdmin')
+      return response.route('dashboardAdmin')
     }
     catch (error){
       // await auth.check()
