@@ -19,7 +19,7 @@ class LoginadminController {
          */
         await auth.attempt(email, password)
     
-        return response.route('admin/dashboardAdmin')
+        return response.route('dashboardAdmin')
     
       }
     

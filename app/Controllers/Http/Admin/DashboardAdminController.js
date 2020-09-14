@@ -3,7 +3,7 @@
 class DashboardAdminController {
 
     index({ view, auth }) {
-        const admin = auth.admin.toJSON()
+        const admin = auth.user.toJSON()
         return view.render('admin/dashboardAdmin', { user: admin })
       }
 }
